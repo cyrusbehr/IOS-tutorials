@@ -30,10 +30,16 @@ class ViewController: UIViewController {
     print("Put cancel actions here")
     }
     
-    alert.addAction((action1)
+    let action2: UIAlertAction = UIAlertAction(title: "Delete", style: .destructive) { (_:UIAlertAction) in
+     print("put delete actions here")
+    }
+    
+    alert.addAction(action1)
+    alert.addAction(action2)
+      
     self.present(alert, animated: true, completion: { 
       print("present complete")
-    })
+    }
 
 }
 
