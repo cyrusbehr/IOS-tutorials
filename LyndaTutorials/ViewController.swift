@@ -35,11 +35,6 @@ class ViewController: UIViewController {
     btn.backgroundColor = UIColor.blue
   }
   
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
 
   @IBAction func showAlertButtonPressed(_ sender: Any) {
     //Create alert controller
@@ -56,9 +51,16 @@ class ViewController: UIViewController {
     alert.addAction(action1)
     alert.addAction(action2)
       
-    self.present(alert, animated: true, completion: { 
+    self.present(alert, animated: true) {
       print("present complete")
     }
+
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
 
 }
 
