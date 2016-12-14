@@ -19,7 +19,9 @@ class WebViewController: UIViewController {
         // Do any additional setup after loading the view.
       webView = WKWebView(frame: CGRect(x:0, y:20, width:300, height:300))
       view.addSubview(webView)
-      webView.loadHTMLString("<h1>Title</h1><p>Words</p>", baseURL: nil)
+      let url: URL = Bundle.main.url(forResource: "page", withExtension: "html")!
+      let req: URLRequest = URLRequest(url: url)
+      webView.load(req)
     }
 
     override func didReceiveMemoryWarning() {
