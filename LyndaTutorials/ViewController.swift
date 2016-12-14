@@ -11,22 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
   @IBOutlet weak var showAlertButton: UIButton!
+  @IBOutlet weak var sliderBar: UISlider!
+  @IBOutlet weak var progressBar: UIProgressView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
-    //Create a label programatically
-    let label: UILabel = UILabel(frame: CGRect(x:20, y: 40, width: 300, height: 30))
-    label.text = "frome code!"
-    view.addSubview(label)
-    
-    //Creat a button programatically --> default background and text color is white
-    let button: UIButton = UIButton(frame: CGRect(x: 20 , y: 100, width: 150, height: 40))
-    button.setTitle("Code Button", for: .normal)
-    button.backgroundColor = UIColor.green
-    button.addTarget(self, action: #selector(didClick), for: UIControlEvents.touchUpInside)
-    view.addSubview(button)
+  
   }
 
   func didClick(btn: UIButton) {
@@ -36,6 +28,15 @@ class ViewController: UIViewController {
   }
   
 
+  //SLIDER
+  @IBAction func didMoveSlider(_ sender: UISlider) {
+  progressBar.progress = sender.value
+  }
+  
+  
+  
+  
+  //ALERT-----------------------------------------
   @IBAction func showAlertButtonPressed(_ sender: Any) {
     //Create alert controller
     let alert: UIAlertController = UIAlertController(title:"Title", message: "Message (note these values can be set to nil)", preferredStyle: .actionSheet)

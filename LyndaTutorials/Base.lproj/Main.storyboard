@@ -21,19 +21,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-yq-OCt">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-yq-OCt">
                                 <rect key="frame" x="39" y="28" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show Alert"/>
                                 <connections>
                                     <action selector="showAlertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHh-rA-J0J"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UdN-Fj-8BZ">
+                                <rect key="frame" x="14" y="77" width="347" height="31"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.6906565657" blue="0.3451168564" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="didMoveSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="B92-7Z-gfh"/>
+                                </connections>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-LZ-ua3">
+                                <rect key="frame" x="16" y="148" width="343" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cDI-LZ-ua3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="48Z-jW-Q2Y"/>
+                            <constraint firstItem="HFS-yq-OCt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="39" id="DUH-Zf-T9i"/>
+                            <constraint firstAttribute="trailing" secondItem="UdN-Fj-8BZ" secondAttribute="trailing" constant="16" id="H4v-W4-tmy"/>
+                            <constraint firstItem="cDI-LZ-ua3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Ivw-z8-pVe"/>
+                            <constraint firstItem="UdN-Fj-8BZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="Rtv-Wf-eHI"/>
+                            <constraint firstItem="UdN-Fj-8BZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="TOe-iq-4dE"/>
+                            <constraint firstItem="cDI-LZ-ua3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bW9-gT-bqE"/>
+                            <constraint firstAttribute="trailing" secondItem="cDI-LZ-ua3" secondAttribute="trailing" constant="16" id="gVG-Dl-RNR"/>
+                            <constraint firstItem="UdN-Fj-8BZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xvX-ti-wRy"/>
+                            <constraint firstItem="HFS-yq-OCt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yYq-SH-sA1"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="cDI-LZ-ua3" id="qXU-2I-i3W"/>
                         <outlet property="showAlertButton" destination="HFS-yq-OCt" id="Nde-e9-ISm"/>
+                        <outlet property="sliderBar" destination="UdN-Fj-8BZ" id="o9F-Sp-ccK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
