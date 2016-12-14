@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
   @IBAction func showAlertButtonPressed(_ sender: Any) {
     //Create alert controller
-    let alert: UIAlertController = UIAlertController(title:"Title", message: "Message (note these values can be set to nil)", preferredStyle: .alert)
+    let alert: UIAlertController = UIAlertController(title:"Title", message: "Message (note these values can be set to nil)", preferredStyle: .actionSheet)
     
     let action1: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { (_:UIAlertAction) in
     print("Put cancel actions here")
