@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--UI View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LyndaTutorials" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="UI View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="LyndaTutorials" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -67,6 +67,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0p-tf-xnM">
+                                <rect key="frame" x="16" y="298" width="94" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.87846326025510202" blue="0.45299213435374147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Next Screen">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vPt-qU-5h7" kind="presentation" id="DkT-Jg-0JT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -74,6 +85,7 @@
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="48Z-jW-Q2Y"/>
                             <constraint firstItem="Sk2-9f-F40" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Eg-nM-NcS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Sk2-9f-F40" secondAttribute="leading" id="7RL-mG-HwU"/>
+                            <constraint firstItem="G0p-tf-xnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ckt-El-IKg"/>
                             <constraint firstItem="HFS-yq-OCt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DUH-Zf-T9i"/>
                             <constraint firstItem="I7T-uv-qNb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FYH-BQ-a37"/>
                             <constraint firstItem="Sk2-9f-F40" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="163" id="GCb-jl-3lE"/>
@@ -85,6 +97,7 @@
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bW9-gT-bqE"/>
                             <constraint firstItem="I7T-uv-qNb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="fdD-S6-5rx"/>
                             <constraint firstAttribute="trailing" secondItem="cDI-LZ-ua3" secondAttribute="trailing" constant="16" id="gVG-Dl-RNR"/>
+                            <constraint firstItem="G0p-tf-xnM" firstAttribute="top" secondItem="F7z-lN-pyw" secondAttribute="bottom" constant="30" id="j85-ta-0oE"/>
                             <constraint firstItem="I7T-uv-qNb" firstAttribute="leading" secondItem="HFS-yq-OCt" secondAttribute="trailing" constant="50" id="krh-Lq-Di9"/>
                             <constraint firstItem="F7z-lN-pyw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="220" id="m6k-S8-Ipp"/>
                             <constraint firstItem="F7z-lN-pyw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qqI-D0-5Wa"/>
@@ -104,6 +117,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--Web View-->
+        <scene sceneID="a8q-RB-d1Q">
+            <objects>
+                <viewController title="Web View" id="vPt-qU-5h7" customClass="WebViewController" customModule="LyndaTutorials" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xkp-tb-Z96"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Xn-19-Yvl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WRI-JN-bfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrR-0m-Ido" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="123"/>
         </scene>
     </scenes>
 </document>
