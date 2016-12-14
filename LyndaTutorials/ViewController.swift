@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var showAlertButton: UIButton!
   @IBOutlet weak var sliderBar: UISlider!
   @IBOutlet weak var progressBar: UIProgressView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,6 +28,14 @@ class ViewController: UIViewController {
     btn.backgroundColor = UIColor.blue
   }
   
+  //SWICH
+  @IBAction func switchDidChange(_ sender: UISwitch) {
+    if (activityIndicator.isAnimating){
+      activityIndicator.stopAnimating()
+    }else{
+      activityIndicator.startAnimating()
+    }
+  }
 
   //SLIDER
   @IBAction func didMoveSlider(_ sender: UISlider) {

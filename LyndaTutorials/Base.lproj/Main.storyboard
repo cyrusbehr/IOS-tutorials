@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,22 +39,38 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-LZ-ua3">
                                 <rect key="frame" x="16" y="148" width="343" height="2"/>
                             </progressView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sk2-9f-F40">
+                                <rect key="frame" x="16" y="183" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="t1I-or-RjA"/>
+                                </connections>
+                            </switch>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="N6b-Sy-vsf">
+                                <rect key="frame" x="115" y="180" width="37" height="37"/>
+                                <color key="color" red="0.12880939999999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="48Z-jW-Q2Y"/>
+                            <constraint firstItem="Sk2-9f-F40" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Eg-nM-NcS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Sk2-9f-F40" secondAttribute="leading" id="7RL-mG-HwU"/>
                             <constraint firstItem="HFS-yq-OCt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="39" id="DUH-Zf-T9i"/>
+                            <constraint firstItem="Sk2-9f-F40" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="163" id="GCb-jl-3lE"/>
                             <constraint firstAttribute="trailing" secondItem="UdN-Fj-8BZ" secondAttribute="trailing" constant="16" id="H4v-W4-tmy"/>
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Ivw-z8-pVe"/>
                             <constraint firstItem="UdN-Fj-8BZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="Rtv-Wf-eHI"/>
                             <constraint firstItem="UdN-Fj-8BZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="TOe-iq-4dE"/>
+                            <constraint firstItem="N6b-Sy-vsf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="ZfR-Vz-9hM"/>
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bW9-gT-bqE"/>
                             <constraint firstAttribute="trailing" secondItem="cDI-LZ-ua3" secondAttribute="trailing" constant="16" id="gVG-Dl-RNR"/>
+                            <constraint firstItem="N6b-Sy-vsf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="wMZ-xQ-0kd"/>
                             <constraint firstItem="UdN-Fj-8BZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xvX-ti-wRy"/>
                             <constraint firstItem="HFS-yq-OCt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yYq-SH-sA1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="N6b-Sy-vsf" id="1IB-Bo-fWt"/>
                         <outlet property="progressBar" destination="cDI-LZ-ua3" id="qXU-2I-i3W"/>
                         <outlet property="showAlertButton" destination="HFS-yq-OCt" id="Nde-e9-ISm"/>
                         <outlet property="sliderBar" destination="UdN-Fj-8BZ" id="o9F-Sp-ccK"/>
