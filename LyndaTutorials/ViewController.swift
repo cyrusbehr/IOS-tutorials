@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
   //SLIDER
   @IBAction func didMoveSlider(_ sender: UISlider) {
-  progressBar.progress = sender.value
+  progressBar.progress = sender.value/sender.maximumValue
   }
   
   
