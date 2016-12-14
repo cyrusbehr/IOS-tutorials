@@ -14,6 +14,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var sliderBar: UISlider!
   @IBOutlet weak var progressBar: UIProgressView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var segmentLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -42,6 +43,12 @@ class ViewController: UIViewController {
   progressBar.progress = sender.value/sender.maximumValue
   }
   
+  //SEGMENT
+  @IBAction func segmentDidChange(_ sender: UISegmentedControl) {
+    let selectedIndex = sender.selectedSegmentIndex
+    segmentLabel.text = sender.titleForSegment(at: selectedIndex)
+  
+  }
   
   
   

@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-yq-OCt">
-                                <rect key="frame" x="39" y="28" width="86" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-yq-OCt">
+                                <rect key="frame" x="20" y="28" width="75" height="30"/>
                                 <state key="normal" title="Show Alert"/>
                                 <connections>
                                     <action selector="showAlertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHh-rA-J0J"/>
@@ -49,13 +49,33 @@
                                 <rect key="frame" x="115" y="180" width="37" height="37"/>
                                 <color key="color" red="0.12880939999999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F7z-lN-pyw">
+                                <rect key="frame" x="16" y="240" width="343" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZdZ-1v-ckF"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7T-uv-qNb">
+                                <rect key="frame" x="145" y="33" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="F7z-lN-pyw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1jL-6o-ADB"/>
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="48Z-jW-Q2Y"/>
                             <constraint firstItem="Sk2-9f-F40" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Eg-nM-NcS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Sk2-9f-F40" secondAttribute="leading" id="7RL-mG-HwU"/>
-                            <constraint firstItem="HFS-yq-OCt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="39" id="DUH-Zf-T9i"/>
+                            <constraint firstItem="HFS-yq-OCt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DUH-Zf-T9i"/>
+                            <constraint firstItem="I7T-uv-qNb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FYH-BQ-a37"/>
                             <constraint firstItem="Sk2-9f-F40" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="163" id="GCb-jl-3lE"/>
                             <constraint firstAttribute="trailing" secondItem="UdN-Fj-8BZ" secondAttribute="trailing" constant="16" id="H4v-W4-tmy"/>
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Ivw-z8-pVe"/>
@@ -63,7 +83,11 @@
                             <constraint firstItem="UdN-Fj-8BZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="TOe-iq-4dE"/>
                             <constraint firstItem="N6b-Sy-vsf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="ZfR-Vz-9hM"/>
                             <constraint firstItem="cDI-LZ-ua3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bW9-gT-bqE"/>
+                            <constraint firstItem="I7T-uv-qNb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="fdD-S6-5rx"/>
                             <constraint firstAttribute="trailing" secondItem="cDI-LZ-ua3" secondAttribute="trailing" constant="16" id="gVG-Dl-RNR"/>
+                            <constraint firstItem="I7T-uv-qNb" firstAttribute="leading" secondItem="HFS-yq-OCt" secondAttribute="trailing" constant="50" id="krh-Lq-Di9"/>
+                            <constraint firstItem="F7z-lN-pyw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="220" id="m6k-S8-Ipp"/>
+                            <constraint firstItem="F7z-lN-pyw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qqI-D0-5Wa"/>
                             <constraint firstItem="N6b-Sy-vsf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="wMZ-xQ-0kd"/>
                             <constraint firstItem="UdN-Fj-8BZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xvX-ti-wRy"/>
                             <constraint firstItem="HFS-yq-OCt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yYq-SH-sA1"/>
@@ -72,6 +96,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="N6b-Sy-vsf" id="1IB-Bo-fWt"/>
                         <outlet property="progressBar" destination="cDI-LZ-ua3" id="qXU-2I-i3W"/>
+                        <outlet property="segmentLabel" destination="I7T-uv-qNb" id="ebZ-h8-5Sp"/>
                         <outlet property="showAlertButton" destination="HFS-yq-OCt" id="Nde-e9-ISm"/>
                         <outlet property="sliderBar" destination="UdN-Fj-8BZ" id="o9F-Sp-ccK"/>
                     </connections>
