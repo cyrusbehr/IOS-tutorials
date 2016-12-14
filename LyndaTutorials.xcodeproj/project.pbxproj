@@ -15,6 +15,7 @@
 		6EC124631E01C42800B998C6 /* LyndaTutorialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC124621E01C42800B998C6 /* LyndaTutorialsTests.swift */; };
 		6EC1246E1E01C42800B998C6 /* LyndaTutorialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1246D1E01C42800B998C6 /* LyndaTutorialsUITests.swift */; };
 		6EC1247C1E020B1200B998C6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1247B1E020B1200B998C6 /* WebViewController.swift */; };
+		6EC1247E1E020E1700B998C6 /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1247D1E020E1700B998C6 /* page.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6EC1246D1E01C42800B998C6 /* LyndaTutorialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyndaTutorialsUITests.swift; sourceTree = "<group>"; };
 		6EC1246F1E01C42800B998C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EC1247B1E020B1200B998C6 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		6EC1247D1E020E1700B998C6 /* page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = page.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC1244D1E01C42800B998C6 /* AppDelegate.swift */,
+				6EC1247D1E020E1700B998C6 /* page.html */,
 				6EC1244F1E01C42800B998C6 /* ViewController.swift */,
 				6EC1247B1E020B1200B998C6 /* WebViewController.swift */,
 				6EC124511E01C42800B998C6 /* Main.storyboard */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC124581E01C42800B998C6 /* LaunchScreen.storyboard in Resources */,
+				6EC1247E1E020E1700B998C6 /* page.html in Resources */,
 				6EC124551E01C42800B998C6 /* Assets.xcassets in Resources */,
 				6EC124531E01C42800B998C6 /* Main.storyboard in Resources */,
 			);
