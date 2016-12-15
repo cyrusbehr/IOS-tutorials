@@ -180,14 +180,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMN-jv-Gmx">
-                                <rect key="frame" x="16" y="70" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMN-jv-Gmx">
+                                <rect key="frame" x="16" y="90" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxg-i9-PAT">
-                                <rect key="frame" x="16" y="120" width="343" height="40"/>
+                                <rect key="frame" x="16" y="140" width="343" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="Bvc-RB-7T6"/>
                                 </constraints>
@@ -195,15 +195,27 @@
                                 <state key="normal" title="GO">
                                     <color key="titleColor" red="0.0" green="0.74749652828571411" blue="0.33041028911564624" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="GVj-M6-7FD" eventType="touchUpInside" id="58b-uZ-Nzk"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter A URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBq-qT-eeW">
+                                <rect key="frame" x="16" y="44" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GBq-qT-eeW" firstAttribute="leading" secondItem="JS7-z2-412" secondAttribute="leadingMargin" id="9ay-fR-J0x"/>
                             <constraint firstItem="nxg-i9-PAT" firstAttribute="top" secondItem="jMN-jv-Gmx" secondAttribute="bottom" constant="20" id="PQq-nJ-dSP"/>
+                            <constraint firstItem="GBq-qT-eeW" firstAttribute="trailing" secondItem="JS7-z2-412" secondAttribute="trailingMargin" id="VqC-Tw-vY9"/>
                             <constraint firstItem="jMN-jv-Gmx" firstAttribute="leading" secondItem="JS7-z2-412" secondAttribute="leadingMargin" id="YXM-nT-CB0"/>
                             <constraint firstItem="nxg-i9-PAT" firstAttribute="centerX" secondItem="JS7-z2-412" secondAttribute="centerX" id="dQL-Ti-yqB"/>
-                            <constraint firstItem="jMN-jv-Gmx" firstAttribute="top" secondItem="cDU-gz-TYT" secondAttribute="bottom" constant="50" id="k61-z1-cDA"/>
+                            <constraint firstItem="GBq-qT-eeW" firstAttribute="top" secondItem="cDU-gz-TYT" secondAttribute="bottom" constant="24" id="oJW-wd-1td"/>
                             <constraint firstItem="jMN-jv-Gmx" firstAttribute="trailing" secondItem="JS7-z2-412" secondAttribute="trailingMargin" id="rxO-og-p0E"/>
+                            <constraint firstItem="jMN-jv-Gmx" firstAttribute="top" secondItem="GBq-qT-eeW" secondAttribute="bottom" constant="25" id="tbC-C4-hV8"/>
                         </constraints>
                     </view>
                     <connections>

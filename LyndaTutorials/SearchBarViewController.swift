@@ -11,6 +11,7 @@ import WebKit
 
 class SearchBarViewController: UIViewController {
 
+  @IBOutlet weak var textBox: UITextField!
   @IBOutlet weak var goButton: UIButton!
   var webView: WKWebView!
   
@@ -19,7 +20,7 @@ class SearchBarViewController: UIViewController {
       
       goButton.layer.cornerRadius = 5
       goButton.layer.borderWidth = 2
-      goButton.layer.borderColor = UIColor.init(red: 0/255, green: 191/255, blue: 84/255, alpha: 1).cgColor
+      goButton.layer.borderColor = UIColor.init(red: 0/255, green: 191/255, blue: 84/255, alpha: 0.8).cgColor
       goButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
       goButton.addTarget(self, action: #selector(buttonReleased(button:)), for: .touchUpInside)
       
@@ -46,11 +47,14 @@ class SearchBarViewController: UIViewController {
     }
   
   func buttonPressed(button:UIButton)  {
-    button.backgroundColor = UIColor.init(red: 0/255, green: 191/255, blue: 84/255, alpha: 0.3)
+    button.backgroundColor = UIColor.init(red: 0/255, green: 191/255, blue: 84/255, alpha: 0.1)
   }
   
   func buttonReleased(button:UIButton) {
     button.backgroundColor = UIColor.clear
+  }
+  
+  @IBAction func goButtonPressed(_ sender: Any) {
   }
 
     /*
