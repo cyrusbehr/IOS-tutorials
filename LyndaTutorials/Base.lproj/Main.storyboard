@@ -181,8 +181,8 @@
                                 <rect key="frame" x="168" y="637" width="77" height="99"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Next"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
                                 <connections>
                                     <segue destination="GVj-M6-7FD" kind="presentation" id="O7f-o4-J5g"/>
