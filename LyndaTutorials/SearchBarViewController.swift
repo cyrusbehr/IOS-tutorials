@@ -11,6 +11,7 @@ import WebKit
 
 class SearchBarViewController: UIViewController, UITextFieldDelegate {
   
+  
   @IBOutlet weak var textBox: UITextField!
   @IBOutlet weak var goButton: UIButton!
   var webView: WKWebView!
@@ -18,7 +19,7 @@ class SearchBarViewController: UIViewController, UITextFieldDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    textBox.delegate = self
+    
     
     // Do any additional setup after loading the view.
     webView = WKWebView()
@@ -26,8 +27,8 @@ class SearchBarViewController: UIViewController, UITextFieldDelegate {
     
     webView.translatesAutoresizingMaskIntoConstraints = false //dont use the frame for the layout, use the autolayout constrains
     let width = NSLayoutConstraint(item: webView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
-    let height = NSLayoutConstraint(item: webView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: -50.0)
-    let top = NSLayoutConstraint(item: webView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 200)
+    let height = NSLayoutConstraint(item: webView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: -115)
+    let top = NSLayoutConstraint(item: webView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 85)
     view.addConstraints([width,height,top])
     
   }
@@ -42,6 +43,7 @@ class SearchBarViewController: UIViewController, UITextFieldDelegate {
     let url: URL = URL(string: textField.text!)!
     let req: URLRequest = URLRequest(url: url)
     webView.load(req)
+    textField.resignFirstResponder()
     return false
   }
   

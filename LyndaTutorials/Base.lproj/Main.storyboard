@@ -193,6 +193,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GVj-M6-7FD" id="Yiw-Bw-MMA"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,6 +207,9 @@
                             <constraint firstItem="76G-ge-dYm" firstAttribute="top" secondItem="cDU-gz-TYT" secondAttribute="bottom" constant="14" id="ytu-cR-pZA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textBox" destination="jMN-jv-Gmx" id="iqD-fO-V1d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17M-jf-viT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
