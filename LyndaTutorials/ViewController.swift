@@ -17,16 +17,17 @@ class ViewController: UIViewController {
   @IBOutlet weak var progressBar: UIProgressView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var segmentLabel: UILabel!
+  @IBOutlet weak var nextScreenButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+   
+    //Corner Radius
+    nextScreenButton.layer.cornerRadius = 5
+    showAlertButton.layer.cornerRadius = 5
     
-    
-    
-    
-    
-    
+    //Setup out Code Button
     let codeButton: UIButton = UIButton(frame: CGRect(x: 20, y: 400, width: self.view.frame.width - 40, height: 50))
     codeButton.setTitle("Click Me", for: .normal)
     codeButton.addTarget(self, action: #selector(codeButtonPressed), for: .touchDown)
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
   //ALERT-----------------------------------------
   @IBAction func showAlertButtonPressed(_ sender: Any) {
     //Create alert controller
-    let alert: UIAlertController = UIAlertController(title:"Title", message: "Message (note these values can be set to nil)", preferredStyle: .actionSheet)
+    let alert: UIAlertController = UIAlertController(title:"Title", message: "Message (note these values can be set to nil)", preferredStyle: .actionSheet) //.alert
     
     let action1: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { (_:UIAlertAction) in
     print("Put cancel actions here")
