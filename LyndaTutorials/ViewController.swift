@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
+    let codeButton: UIButton = UIButton(frame: CGRect(x: 20, y: 100, width: self.view.frame.width + 20, height: 140))
+    codeButton.setTitle("Click Me", for: .normal)
+    codeButton.addTarget(, action: <#T##Selector#>, for: <#T##UIControlEvents#>)
+    view.addSubview(codeButton)
   
   }
 
