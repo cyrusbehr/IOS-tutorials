@@ -17,11 +17,18 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
       
         // Do any additional setup after loading the view.
-      webView = WKWebView(frame: CGRect(x:0, y:20, width:300, height:300))
+      webView = WKWebView()
       view.addSubview(webView)
-      let url: URL = Bundle.main.url(forResource: "page", withExtension: "html")!
+      let url: URL = URL(string: "https://www.google.com")!
       let req: URLRequest = URLRequest(url: url)
       webView.load(req)
+      
+      webView.translatesAutoresizingMaskIntoConstraints = false //dont use the frame for the layout, use the autolayout constrains
+      let width = NSLayoutConstraint(item: webView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
+      let height = NSLayoutConstraint(item: webView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: -50.0)
+      let top = NSLayoutConstraint(item: webView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 20)
+      
+      view.addConstraints([width,height,top])
     }
 
     override func didReceiveMemoryWarning() {
