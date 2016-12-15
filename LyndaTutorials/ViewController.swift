@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  
 
   @IBOutlet weak var showAlertButton: UIButton!
   @IBOutlet weak var sliderBar: UISlider!
@@ -20,9 +22,20 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
-    let codeButton: UIButton = UIButton(frame: CGRect(x: 20, y: 100, width: self.view.frame.width + 20, height: 140))
+    
+    
+    
+    
+    
+    let codeButton: UIButton = UIButton(frame: CGRect(x: 20, y: 400, width: self.view.frame.width - 40, height: 50))
     codeButton.setTitle("Click Me", for: .normal)
-    codeButton.addTarget(, action: <#T##Selector#>, for: <#T##UIControlEvents#>)
+    codeButton.addTarget(self, action: #selector(codeButtonPressed), for: .touchDown)
+    codeButton.addTarget(self, action: #selector(codeButtonReleased(button:)), for: .touchUpInside)
+    codeButton.setTitleColor(UIColor.init(red: 32/255, green: 183/255, blue: 252/255, alpha: 1), for: .normal)
+    codeButton.backgroundColor = UIColor.clear
+    codeButton.layer.cornerRadius = 5
+    codeButton.layer.borderWidth = 2
+    codeButton.layer.borderColor = UIColor.init(red: 32/255, green: 183/255, blue: 252/255, alpha: 1).cgColor
     view.addSubview(codeButton)
   
   }
@@ -54,8 +67,16 @@ class ViewController: UIViewController {
   
   }
   
+  //BUTTON RELEASED
+  func codeButtonReleased(button:UIButton) {
+    button.backgroundColor = UIColor.clear
+  }
   
-  
+  //BUTTON PRESSED
+  func codeButtonPressed(button: UIButton) {
+    print("you pressed the button!")
+    button.backgroundColor = UIColor.init(red: 32/255, green: 183/255, blue: 252/255, alpha: 0.3)
+  }
   
   //ALERT-----------------------------------------
   @IBAction func showAlertButtonPressed(_ sender: Any) {
@@ -85,4 +106,6 @@ class ViewController: UIViewController {
   }
 
 }
+
+
 
