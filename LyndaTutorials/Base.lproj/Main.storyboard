@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m6E-UH-Doc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -77,9 +77,6 @@
                                 <state key="normal" title="Next Screen">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="vPt-qU-5h7" kind="presentation" id="DkT-Jg-0JT"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7T-uv-qNb">
                                 <rect key="frame" x="161" y="37" width="198" height="21"/>
@@ -126,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="1583" y="123"/>
         </scene>
         <!--Web View-->
         <scene sceneID="a8q-RB-d1Q">
@@ -151,7 +148,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GVj-M6-7FD" kind="presentation" id="xKF-eE-uoR"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="7Dy-5S-wvt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,6 +164,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrR-0m-Ido" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850" y="123"/>
+        </scene>
+        <!--classSizes-->
+        <scene sceneID="qhn-Ar-Ogn">
+            <objects>
+                <viewController title="classSizes" id="m6E-UH-Doc" customClass="classSizes" customModule="LyndaTutorials" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7VN-ro-pjd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bOp-0V-fBB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wmh-OQ-Msn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxv-4A-CIv">
+                                <rect key="frame" x="164" y="637" width="46" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="GVj-M6-7FD" kind="presentation" id="O7f-o4-J5g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOp-0V-fBB" firstAttribute="top" secondItem="jxv-4A-CIv" secondAttribute="bottom" id="3VY-cz-fpT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jxv-4A-CIv" secondAttribute="trailing" constant="149" id="5hy-ZY-pHx"/>
+                            <constraint firstItem="jxv-4A-CIv" firstAttribute="leading" secondItem="Wmh-OQ-Msn" secondAttribute="leadingMargin" constant="148" id="fkY-6Q-xI2"/>
+                            <constraint firstItem="jxv-4A-CIv" firstAttribute="top" secondItem="7VN-ro-pjd" secondAttribute="bottom" constant="617" id="ga2-Wg-4BP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Us9-df-c4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572" y="123"/>
         </scene>
         <!--Search Bar View-->
         <scene sceneID="Zit-DF-Ory">
@@ -188,6 +218,17 @@
                                     <action selector="backButtonPressed:" destination="GVj-M6-7FD" eventType="touchUpInside" id="bO0-hs-SpA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9i-da-Ro3">
+                                <rect key="frame" x="145" y="637" width="84" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.77919827148299325" blue="1" alpha="0.30586723993288589" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y6I-yY-RGl"/>
+                                </constraints>
+                                <state key="normal" title="Next Screen"/>
+                                <connections>
+                                    <segue destination="vPt-qU-5h7" kind="presentation" id="b9c-md-q4j"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMN-jv-Gmx">
                                 <rect key="frame" x="54" y="43" width="299" height="30"/>
                                 <nil key="textColor"/>
@@ -200,10 +241,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="y9i-da-Ro3" firstAttribute="centerX" secondItem="JS7-z2-412" secondAttribute="centerX" id="EKy-k8-VV6"/>
                             <constraint firstItem="76G-ge-dYm" firstAttribute="leading" secondItem="JS7-z2-412" secondAttribute="leading" constant="14" id="QW4-kx-Sak"/>
+                            <constraint firstItem="qRY-J7-aeg" firstAttribute="top" secondItem="y9i-da-Ro3" secondAttribute="bottom" id="Uc4-LJ-BBq"/>
                             <constraint firstItem="jMN-jv-Gmx" firstAttribute="leading" secondItem="JS7-z2-412" secondAttribute="leadingMargin" constant="44" id="YXM-nT-CB0"/>
                             <constraint firstItem="jMN-jv-Gmx" firstAttribute="top" secondItem="cDU-gz-TYT" secondAttribute="bottom" constant="20" id="ghh-vQ-8e4"/>
+                            <constraint firstItem="y9i-da-Ro3" firstAttribute="leading" secondItem="JS7-z2-412" secondAttribute="leading" id="lZW-f9-yMb"/>
                             <constraint firstItem="jMN-jv-Gmx" firstAttribute="trailing" secondItem="JS7-z2-412" secondAttribute="trailingMargin" id="rxO-og-p0E"/>
+                            <constraint firstAttribute="trailing" secondItem="y9i-da-Ro3" secondAttribute="trailing" id="sjL-T2-L0I"/>
                             <constraint firstItem="76G-ge-dYm" firstAttribute="top" secondItem="cDU-gz-TYT" secondAttribute="bottom" constant="14" id="ytu-cR-pZA"/>
                         </constraints>
                     </view>
@@ -213,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17M-jf-viT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560.8" y="122.78860569715144"/>
+            <point key="canvasLocation" x="111" y="123"/>
         </scene>
     </scenes>
 </document>
