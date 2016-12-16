@@ -35,7 +35,7 @@ class tableViewController: UIViewController, UITableViewDataSource {
     cell.detailTextLabel?.text = sub[indexPath.section][indexPath.row]
     cell.imageView?.image = UIImage(named: "star")
     
-    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+    let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: cell.frame.width-10, height: cell.frame.height))
     let image = UIImage(named: "cellBackground")
     imageView.image = image
     cell.backgroundView = UIView()

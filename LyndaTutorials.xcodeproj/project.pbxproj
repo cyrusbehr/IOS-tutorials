@@ -18,6 +18,7 @@
 		6EC1247C1E020B1200B998C6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1247B1E020B1200B998C6 /* WebViewController.swift */; };
 		6EC1247E1E020E1700B998C6 /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1247D1E020E1700B998C6 /* page.html */; };
 		6EDA63901E032C6E003E2B05 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDA638F1E032C6E003E2B05 /* SearchBarViewController.swift */; };
+		6EF8DB751E04B4B900F600C2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8DB741E04B4B900F600C2 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		6EC1247B1E020B1200B998C6 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6EC1247D1E020E1700B998C6 /* page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = page.html; sourceTree = "<group>"; };
 		6EDA638F1E032C6E003E2B05 /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		6EF8DB741E04B4B900F600C2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB530771E047A3B0021FDC3 /* tableViewController.swift */,
+				6EF8DB741E04B4B900F600C2 /* CustomTableViewCell.swift */,
 				6EC1244D1E01C42800B998C6 /* AppDelegate.swift */,
 				6EC1247D1E020E1700B998C6 /* page.html */,
 				6EC1244F1E01C42800B998C6 /* ViewController.swift */,
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF8DB751E04B4B900F600C2 /* CustomTableViewCell.swift in Sources */,
 				6EC124501E01C42800B998C6 /* ViewController.swift in Sources */,
 				6EC1247C1E020B1200B998C6 /* WebViewController.swift in Sources */,
 				6EDA63901E032C6E003E2B05 /* SearchBarViewController.swift in Sources */,
