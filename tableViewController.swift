@@ -9,7 +9,9 @@
 import UIKit
 
 class tableViewController: UIViewController, UITableViewDataSource {
-
+  
+  let data: [String] = ["Item 1", "Item 2", "Item 3"]
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,12 +24,12 @@ class tableViewController: UIViewController, UITableViewDataSource {
     }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return data.count
   }
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.textLabel?.text = "It's a CELL!"
+    cell.textLabel?.text = data[indexPath.row]
     return cell
   }
   
