@@ -11,11 +11,12 @@ import UIKit
 class tableViewController: UIViewController, UITableViewDataSource {
   
   let data: [[String]] = [["Item 1", "Item 2", "Item 3"],["Item A", "Item B", "Item C"]]
+  let sub: [[String]] = [["sub 1", "sub 2", "sub 3"],["sub A", "sub B", "sub C"]]
   let headers: [String] = ["Numbered","Lettered"]
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Do any additional setup after loading the view.
     }
 
@@ -31,6 +32,16 @@ class tableViewController: UIViewController, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     cell.textLabel?.text = data[indexPath.section][indexPath.row]
+    cell.detailTextLabel?.text = sub[indexPath.section][indexPath.row]
+    cell.imageView?.image = UIImage(named: "star")
+    
+    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+    let image = UIImage(named: "cellBackground")
+    imageView.image = image
+    cell.backgroundView = UIView()
+    cell.backgroundView!.addSubview(imageView)
+    cell.backgroundColor = UIColor.clear
+    
     return cell
   }
   
@@ -41,6 +52,7 @@ class tableViewController: UIViewController, UITableViewDataSource {
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return headers[section]
   }
+ 
     /*
     // MARK: - Navigation
 
