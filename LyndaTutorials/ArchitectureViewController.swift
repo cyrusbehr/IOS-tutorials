@@ -37,9 +37,11 @@ class ArchitectureViewController: UIViewController {
   }
   
   override func viewWillDisappear(_ animated: Bool) {
+   //NOT CALLED FOR THE APPLICATION ENTERING THE BACKGROUND, BUT THE VIEW DISSAPEARING WHEN REPLACED BY A NEW VIEW
     super.viewWillDisappear(animated)
     print("viewWillDisappear")
   }
+  
     /*
     // MARK: - Navigation
 
