@@ -22,16 +22,24 @@ class ArchitectureViewController: UIViewController {
     }
   
   override func viewDidAppear(_ animated: Bool) {
-    <#code#>
+    super.viewDidAppear(animated)//MUST CALL SUPER METHOD
+    print("viewDidAppear")
   }
-  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    <#code#>
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print("viewWillAppear")
   }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    print("viewDidDisappear")
+  }
+  
   override func viewWillDisappear(_ animated: Bool) {
-    <#code#>
+    super.viewWillDisappear(animated)
+    print("viewWillDisappear")
   }
-  
-  
     /*
     // MARK: - Navigation
 
