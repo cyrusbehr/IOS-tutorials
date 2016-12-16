@@ -182,7 +182,7 @@
                                 <state key="normal" title="Next Screen"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9t-tQ-CXI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="670"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="VRU-4E-kix">
@@ -204,7 +204,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="G9t-tQ-CXI" secondAttribute="trailing" id="2jc-E9-ouE"/>
                             <constraint firstItem="CLf-sd-xOo" firstAttribute="leading" secondItem="0TD-oJ-YNs" secondAttribute="leading" id="JTI-EW-2cW"/>
-                            <constraint firstItem="G9t-tQ-CXI" firstAttribute="top" secondItem="0TD-oJ-YNs" secondAttribute="top" id="Xel-ks-60O"/>
+                            <constraint firstItem="G9t-tQ-CXI" firstAttribute="top" secondItem="0TD-oJ-YNs" secondAttribute="top" constant="20" id="Xel-ks-60O"/>
                             <constraint firstAttribute="trailing" secondItem="CLf-sd-xOo" secondAttribute="trailing" id="d4x-ac-PIu"/>
                             <constraint firstItem="bCI-2q-HSW" firstAttribute="top" secondItem="G9t-tQ-CXI" secondAttribute="bottom" constant="46" id="hio-fN-ln2"/>
                             <constraint firstItem="bCI-2q-HSW" firstAttribute="top" secondItem="CLf-sd-xOo" secondAttribute="bottom" constant="8" id="l2e-vl-ylt"/>
