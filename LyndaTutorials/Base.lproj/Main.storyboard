@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m6E-UH-Doc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -164,43 +164,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrR-0m-Ido" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850" y="123"/>
-        </scene>
-        <!--classSizes-->
-        <scene sceneID="qhn-Ar-Ogn">
-            <objects>
-                <viewController title="classSizes" id="m6E-UH-Doc" customClass="classSizes" customModule="LyndaTutorials" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7VN-ro-pjd"/>
-                        <viewControllerLayoutGuide type="bottom" id="bOp-0V-fBB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wmh-OQ-Msn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxv-4A-CIv">
-                                <rect key="frame" x="168" y="637" width="77" height="99"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Next"/>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="GVj-M6-7FD" kind="presentation" id="O7f-o4-J5g"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="bOp-0V-fBB" firstAttribute="top" secondItem="jxv-4A-CIv" secondAttribute="bottom" id="3VY-cz-fpT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jxv-4A-CIv" secondAttribute="trailing" constant="149" id="5hy-ZY-pHx"/>
-                            <constraint firstItem="jxv-4A-CIv" firstAttribute="leading" secondItem="Wmh-OQ-Msn" secondAttribute="leadingMargin" constant="148" id="fkY-6Q-xI2"/>
-                            <constraint firstItem="jxv-4A-CIv" firstAttribute="top" secondItem="7VN-ro-pjd" secondAttribute="bottom" constant="617" id="ga2-Wg-4BP"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Us9-df-c4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-572" y="123"/>
         </scene>
         <!--Search Bar View-->
         <scene sceneID="Zit-DF-Ory">
