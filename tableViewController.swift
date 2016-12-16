@@ -1,5 +1,5 @@
 //
-//  ArchitectureViewController.swift
+//  tableViewController.swift
 //  LyndaTutorials
 //
 //  Created by Cyrus Behroozi on 2016-12-16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArchitectureViewController: UIViewController {
+class tableViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,28 +20,8 @@ class ArchitectureViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)//MUST CALL SUPER METHOD
-    print("viewDidAppear")
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    print("viewWillAppear")
-  }
-  
-  override func viewDidDisappear(_ animated: Bool) {
-    super.viewDidDisappear(animated)
-    print("viewDidDisappear")
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-   //NOT CALLED FOR THE APPLICATION ENTERING THE BACKGROUND, BUT THE VIEW DISSAPEARING WHEN REPLACED BY A NEW VIEW
-    super.viewWillDisappear(animated)
-    print("viewWillDisappear")
-  }
-  
+    
+
     /*
     // MARK: - Navigation
 
