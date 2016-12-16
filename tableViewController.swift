@@ -11,6 +11,7 @@ import UIKit
 class tableViewController: UIViewController, UITableViewDataSource {
   
   let data: [[String]] = [["Item 1", "Item 2", "Item 3"],["Item A", "Item B", "Item C"]]
+  let headers: [String] = ["Numbered","Lettered"]
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,10 @@ class tableViewController: UIViewController, UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return data.count
+  }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return headers[section]
   }
     /*
     // MARK: - Navigation
