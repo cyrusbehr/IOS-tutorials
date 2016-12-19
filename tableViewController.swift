@@ -8,7 +8,7 @@
 
 import UIKit
 
-class tableViewController: UIViewController, UITableViewDataSource {
+class tableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   let data: [[String]] = [["Item 1", "Item 2", "Item 3"],["Item A", "Item B", "Item C"]]
   let sub: [[String]] = [["sub 1", "sub 2", "sub 3"],["sub A", "sub B", "sub C"]]
@@ -51,6 +51,10 @@ class tableViewController: UIViewController, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return headers[section]
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("\(data[indexPath.section][indexPath.row])")
   }
  
     /*
